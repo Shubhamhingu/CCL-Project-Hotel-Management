@@ -16,7 +16,7 @@ def contact(request):
         contact = Contact(from_name=from_name, from_email=from_email, subject=subject, message=message)
         contact.save()
 
-        email = EmailMessage('Contact', 'Thanks for submiting your query we will get back soon', to=[from_email])
+        email = EmailMessage('Contact', 'Thanks!!', to=[from_email])
         email.send()   
          
     return render(request, "contact.html",)
